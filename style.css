@@ -1,0 +1,258 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Space Mono',monospace;
+    font-weight: 700;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+   
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+}
+.title{
+    margin:4% auto;
+}
+.container{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    max-width: 42rem;
+    margin: auto;
+    vertical-align: middle;
+    background-color: white;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 40px hsl(184, 14%, 56%);
+}
+.container-left, .container-right{
+    padding: 1rem;
+    border-radius: 0.6rem;
+}
+.container-left{
+    display: grid;
+    gap: 1rem;
+}
+.container-tip{
+  display: grid;
+  grid-auto-rows:1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:0.7rem ;
+  
+  
+}
+
+.container-right{
+    background-color: hsl(183, 100%, 15%);
+    
+}
+
+.container-tip button{
+    padding: 0.5rem;
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 0.4rem;
+   
+    background-color:hsl(183, 100%, 15%) ;
+    color: white;
+    border-color:hsl(183, 100%, 15%);
+    border-style:solid ;
+    
+}
+
+#custom{
+    text-align: center;
+    width: 100%;
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 0.4rem;
+    background-color:hsl(189, 41%, 97%) ;
+    border: none;
+    outline: none;
+    color:hsl(183, 100%, 15%); 
+    font-weight: 700;
+    font-size: medium;
+}
+
+
+.img{
+    position: relative;
+
+}
+
+.img img {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+.img input{
+    
+    background-color:hsl(189, 41%, 97%);
+    border-radius: 0.3rem;
+    border: none;
+    height: 2rem;
+    width: 96%;
+    text-align: right;
+    padding-right: 1rem;
+    outline: none;
+    color:hsl(183, 100%, 15%); 
+    font-weight: 700;
+    font-size: medium;
+
+}
+
+.input-left::placeholder{
+    text-align: right;
+
+}
+
+.tip-amount-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.7rem;
+}
+
+h1{
+    text-align: right;
+    color:  hsl(172, 67%, 45%);
+}
+
+h3{
+    color: hsl(189, 41%, 97%);
+    font-size:0.8rem ;
+}
+
+h6{
+    color: hsl(184, 14%, 56%);
+    font-size:0.8rem ;
+}
+
+.reset{
+    background-color: hsl(183, 80%, 25%);
+    color:  hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.4rem ;
+    position: absolute;
+    bottom: 2rem;
+    right: 1.2rem;
+    left: 1.2rem;
+    
+}
+
+/* Hover state */
+.container-tip button:hover{
+    color: hsl(183, 100%, 15%);
+    background-color:  hsl(185, 41%, 84%);
+    border: none;
+}
+
+.container-tip input:focus{
+    box-shadow: 0 0 5px hsl(172, 67%, 45%);
+    outline: none;
+}
+
+.input-left:focus{
+    box-shadow: 0 0 5px hsl(172, 67%, 45%);
+    outline: none;
+}
+.bill-error , .people-error{
+    position: relative;
+}
+.bill-error p , .people-error p{
+    position: absolute;
+    font-size: small;
+    color: red;
+    right: 0.5rem;
+    top: 0.3rem;
+
+}
+
+.reset-enable{
+    background-color: hsl(185, 41%, 84%);
+    color:hsl(183, 100%, 15%) ;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.4rem ;
+    position: absolute;
+    bottom: 2rem;
+    right: 1.2rem;
+    left: 1.2rem;
+}
+
+.reset-enable:hover{
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+}
+
+.input-error{
+   box-shadow: 0 0 5px red;
+}
+
+.attribution{
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: hsl(172, 67%, 45%);
+
+}
+
+@media(max-width : 375px){
+ 
+    .container{
+        padding: 2rem;
+        display: grid;
+        grid-template-columns:1fr;
+        max-width: 42rem;
+        margin:12% auto;
+        vertical-align: middle;
+        background-color: white;
+        border-radius: 0.8rem;
+        box-shadow: 0 0 40px hsl(184, 14%, 56%);
+    }
+    .container-tip{
+        display: grid;
+        
+        grid-template-columns: 1fr 1fr;
+        gap:0.7rem ;
+        
+        
+      }
+    .container-right{
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .img img {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+    .img input{
+        
+        background-color:hsl(189, 41%, 97%);
+        border-radius: 0.3rem;
+        border: none;
+        /* height: 2rem; */
+        width: 96%;
+        text-align: right;
+        padding-right: 1rem;
+        outline: none;
+        color:hsl(183, 100%, 15%); 
+        font-weight: 700;
+        font-size: medium;
+    
+    }
+    .title{
+        margin-top: 20%;
+    }
+    .attribution{
+        text-align: center;
+        margin:4%;
+        margin-bottom: 6%;
+        font-size: small;
+    }
+}
